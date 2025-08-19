@@ -16,7 +16,6 @@ app.post('/fen', (req, res) => {
     stockfish.stdin.write('uci\n');
     stockfish.stdin.write('ucinewgame\n');
     stockfish.stdin.write(`position fen ${fen}\n`);
-    // stockfish.stdin.write('go movetime 1000\n');
     stockfish.stdin.write('go depth 2\n');
     
   stockfish.stdout.on('data', (data) => {
