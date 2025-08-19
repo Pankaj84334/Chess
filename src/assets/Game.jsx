@@ -44,7 +44,7 @@ function Game() {
     if (!gameOver && !isPlayerTurn.current) {
       setTimeout(() => {
         makeBotMove();
-      },3350);
+      },1500);
     }
   }, [game, playerTurnState]);
 
